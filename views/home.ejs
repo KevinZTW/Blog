@@ -1,0 +1,24 @@
+
+<%- include("partials/header");%> 
+
+    <h1>HOME </h1>
+    <div><%=hsc %></div>
+
+    <div>Contact me </div>
+    <div><%=aboutC%></div>
+
+
+    <% for (count=0; count < postTotal.length; count++){ %>
+        <% console.log(postTotal[count].title) %>
+        <h1><%= postTotal[count].title %></h1>
+        <div><%= postTotal[count].post %></div>
+    <%} %>
+
+    <% postTotal.forEach(function(element){ %>
+        <h1><%= element.title %></h1>
+    <% }) %>
+
+</body>
+</html>
+
+<%- include("partials/footer");%> 
